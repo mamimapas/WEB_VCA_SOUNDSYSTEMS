@@ -7,21 +7,13 @@ import { ArrowRight, Play } from "lucide-react";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video background */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/images/trabajos/evento-01.jpg"
-          className="w-full h-full object-cover"
+      {/* Background image (video se añadirá cuando Eusebio entregue material real) */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url(/images/trabajos/evento-01.jpg)" }}
           aria-hidden="true"
-        >
-          {/* Placeholder: cuando Eusebio entregue su material de video, reemplazar src */}
-          <source src="/video/hero-loop.mp4" type="video/mp4" />
-          <source src="/video/hero-loop.webm" type="video/webm" />
-        </video>
+        />
         {/* Overlay oscuro multi-capa */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/80 via-[#0A0A0A]/60 to-[#0A0A0A]/90" />
         <div className="absolute inset-0 bg-[#0A0A0A]/30" />

@@ -277,7 +277,7 @@ export default function SobreNosotrosClient() {
       {/* Hero */}
       <section className="relative pt-24 pb-20 sm:pt-32 sm:pb-24 bg-[#0A0A0A] overflow-hidden">
         <div
-          className="absolute top-8 left-4 text-[18rem] font-bold leading-none text-white opacity-5 pointer-events-none select-none"
+          className="absolute top-8 left-4 text-[10rem] sm:text-[14rem] lg:text-[18rem] font-bold leading-none text-white opacity-5 pointer-events-none select-none"
           style={{ fontFamily: "var(--font-barlow-condensed)" }}
           aria-hidden="true"
         >
