@@ -4,17 +4,17 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import {
   MapPin,
-  Users,
   Target,
   ShieldCheck,
   Headphones,
   Zap,
+  Users,
 } from "lucide-react";
 
 // ─── Timeline ─────────────────────────────────────────────────────────────────
 // NOTA: Las fechas de los hitos son aproximaciones basadas en los ~50 anos de
 // trayectoria confirmada (fundacion 1975). Actualizar cuando Eusebio confirme
-// las fechas exactas de cada hito.
+// las fechas exactas de cada hito historico.
 
 const TIMELINE = [
   {
@@ -61,13 +61,11 @@ const TIMELINE = [
   },
 ];
 
-// ─── Valores ──────────────────────────────────────────────────────────────────
-
 const VALORES = [
   {
     icon: ShieldCheck,
     title: "Garantia el dia del show",
-    desc: "No somos un proveedor mas. Cuando el telcon se levanta, somos parte de tu equipo. 50 anos de experiencia respaldan cada decision tecnica.",
+    desc: "No somos un proveedor mas. Cuando el telon se levanta, somos parte de tu equipo. 50 anos de experiencia respaldan cada decision tecnica.",
   },
   {
     icon: Headphones,
@@ -96,8 +94,6 @@ const VALORES = [
   },
 ];
 
-// ─── Ciudades (mapa de cobertura) ─────────────────────────────────────────────
-
 const CIUDADES = [
   "Logrono",
   "Madrid",
@@ -113,144 +109,7 @@ const CIUDADES = [
   "Valladolid",
 ];
 
-// ─── Valores Section (hook-safe sub-component) ───────────────────────────────
-
-function ValoresSection() {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-
-  return (
-    <section ref={ref} className="py-20 sm:py-28 bg-[#111827] border-y border-[#374151]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <p className="text-[#FF6B35] text-xs font-bold uppercase tracking-widest mb-3">
-            Lo que nos define
-          </p>
-          <h2
-            className="text-4xl sm:text-5xl font-bold text-[#F9FAFB] uppercase"
-            style={{ fontFamily: "var(--font-barlow-condensed)" }}
-          >
-            Mision y valores
-          </h2>
-          <p className="text-[#9CA3AF] mt-4 max-w-2xl mx-auto text-base">
-            En VCA Sound Systems no vendemos equipos. Vendemos la certeza de
-            que el dia de tu evento todo va a funcionar.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {VALORES.map(({ icon: Icon, title, desc }, i) => (
-            <motion.div
-              key={title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-[#0A0A0A] border border-[#374151] rounded-xl p-6 hover:border-[#FF6B35]/40 transition-colors duration-300 group"
-            >
-              <div className="w-12 h-12 rounded-lg bg-[#FF6B35]/10 border border-[#FF6B35]/20 flex items-center justify-center mb-4 group-hover:bg-[#FF6B35]/20 transition-colors">
-                <Icon size={22} className="text-[#FF6B35]" />
-              </div>
-              <h3
-                className="text-[#F9FAFB] font-bold text-xl uppercase mb-2"
-                style={{ fontFamily: "var(--font-barlow-condensed)" }}
-              >
-                {title}
-              </h3>
-              <p className="text-[#9CA3AF] text-sm leading-relaxed">{desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ─── Sub-componentes ──────────────────────────────────────────────────────────
-
-function TimelineItem({
-  item,
-  index,
-  isLast,
-}: {
-  item: (typeof TIMELINE)[0];
-  index: number;
-  isLast: boolean;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
-  const isLeft = index % 2 === 0;
-
-  return (
-    <div ref={ref} className="relative flex items-start gap-0">
-      {/* Linea vertical */}
-      {!isLast && (
-        <div className="absolute left-1/2 top-10 bottom-0 w-px -translate-x-1/2 bg-[#374151]" />
-      )}
-
-      {/* Desktop: alternado izquierda/derecha */}
-      <div className="hidden md:grid md:grid-cols-2 md:gap-8 w-full">
-        {/* Columna izquierda */}
-        <div className={`${isLeft ? "text-right" : ""} pr-8`}>
-          {isLeft && (
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <ContentCard item={item} />
-            </motion.div>
-          )}
-        </div>
-
-        {/* Punto central */}
-        <div className="absolute left-1/2 top-6 -translate-x-1/2 z-10">
-          <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            animate={isInView ? { scale: 1, opacity: 1 } : {}}
-            transition={{ duration: 0.4, delay: 0.05 }}
-            className="w-4 h-4 rounded-full bg-[#FF6B35] border-4 border-[#0A0A0A] shadow-[0_0_12px_rgba(255,107,53,0.5)]"
-          />
-        </div>
-
-        {/* Columna derecha */}
-        <div className="pl-8">
-          {!isLeft && (
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <ContentCard item={item} />
-            </motion.div>
-          )}
-        </div>
-      </div>
-
-      {/* Mobile: lista simple */}
-      <div className="flex md:hidden gap-4 pb-10">
-        <div className="relative flex flex-col items-center">
-          <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            animate={isInView ? { scale: 1, opacity: 1 } : {}}
-            transition={{ duration: 0.4 }}
-            className="w-4 h-4 rounded-full bg-[#FF6B35] border-4 border-[#0A0A0A] flex-shrink-0 mt-1 shadow-[0_0_12px_rgba(255,107,53,0.4)]"
-          />
-          {!isLast && (
-            <div className="w-px flex-1 bg-[#374151] mt-2" />
-          )}
-        </div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="flex-1"
-        >
-          <ContentCard item={item} />
-        </motion.div>
-      </div>
-    </div>
-  );
-}
+// ─── Componentes hoja (cada uno llama hooks en el nivel correcto) ──────────────
 
 function ContentCard({ item }: { item: (typeof TIMELINE)[0] }) {
   return (
@@ -277,6 +136,139 @@ function ContentCard({ item }: { item: (typeof TIMELINE)[0] }) {
   );
 }
 
+function TimelineItem({
+  item,
+  index,
+  isLast,
+}: {
+  item: (typeof TIMELINE)[0];
+  index: number;
+  isLast: boolean;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const isLeft = index % 2 === 0;
+
+  return (
+    <div ref={ref} className="relative flex items-start">
+      {!isLast && (
+        <div className="absolute left-1/2 top-10 bottom-0 w-px -translate-x-1/2 bg-[#374151]" />
+      )}
+
+      {/* Desktop: alternado */}
+      <div className="hidden md:grid md:grid-cols-2 md:gap-8 w-full">
+        <div className="pr-8">
+          {isLeft && (
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <ContentCard item={item} />
+            </motion.div>
+          )}
+        </div>
+
+        <div className="absolute left-1/2 top-6 -translate-x-1/2 z-10">
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            animate={isInView ? { scale: 1, opacity: 1 } : {}}
+            transition={{ duration: 0.4, delay: 0.05 }}
+            className="w-4 h-4 rounded-full bg-[#FF6B35] border-4 border-[#0A0A0A] shadow-[0_0_12px_rgba(255,107,53,0.5)]"
+          />
+        </div>
+
+        <div className="pl-8">
+          {!isLeft && (
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              <ContentCard item={item} />
+            </motion.div>
+          )}
+        </div>
+      </div>
+
+      {/* Mobile */}
+      <div className="flex md:hidden gap-4 pb-10">
+        <div className="relative flex flex-col items-center">
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            animate={isInView ? { scale: 1, opacity: 1 } : {}}
+            transition={{ duration: 0.4 }}
+            className="w-4 h-4 rounded-full bg-[#FF6B35] border-4 border-[#0A0A0A] flex-shrink-0 mt-1"
+          />
+          {!isLast && <div className="w-px flex-1 bg-[#374151] mt-2" />}
+        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="flex-1"
+        >
+          <ContentCard item={item} />
+        </motion.div>
+      </div>
+    </div>
+  );
+}
+
+function ValorCard({
+  icon: Icon,
+  title,
+  desc,
+  delay,
+}: {
+  icon: (typeof VALORES)[0]["icon"];
+  title: string;
+  desc: string;
+  delay: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-60px" });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, delay }}
+      className="bg-[#0A0A0A] border border-[#374151] rounded-xl p-6 hover:border-[#FF6B35]/40 transition-colors duration-300 group"
+    >
+      <div className="w-12 h-12 rounded-lg bg-[#FF6B35]/10 border border-[#FF6B35]/20 flex items-center justify-center mb-4 group-hover:bg-[#FF6B35]/20 transition-colors">
+        <Icon size={22} className="text-[#FF6B35]" />
+      </div>
+      <h3
+        className="text-[#F9FAFB] font-bold text-xl uppercase mb-2"
+        style={{ fontFamily: "var(--font-barlow-condensed)" }}
+      >
+        {title}
+      </h3>
+      <p className="text-[#9CA3AF] text-sm leading-relaxed">{desc}</p>
+    </motion.div>
+  );
+}
+
+function CiudadCard({ ciudad, delay }: { ciudad: string; delay: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-40px" });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={inView ? { opacity: 1, scale: 1 } : {}}
+      transition={{ duration: 0.4, delay }}
+      className="flex flex-col items-center gap-1.5 bg-[#111827] border border-[#374151] rounded-lg p-3 text-center"
+    >
+      <MapPin size={14} className="text-[#FF6B35]" />
+      <span className="text-[#F9FAFB] text-xs font-medium">{ciudad}</span>
+    </motion.div>
+  );
+}
+
 // ─── Componente principal ─────────────────────────────────────────────────────
 
 export default function SobreNosotrosClient() {
@@ -284,14 +276,12 @@ export default function SobreNosotrosClient() {
     <>
       {/* Hero */}
       <section className="relative pt-24 pb-20 sm:pt-32 sm:pb-24 bg-[#0A0A0A] overflow-hidden">
-        <div className="absolute inset-0 opacity-5 pointer-events-none select-none">
-          <div
-            className="absolute top-8 left-4 text-[18rem] font-bold leading-none text-white"
-            style={{ fontFamily: "var(--font-barlow-condensed)" }}
-            aria-hidden="true"
-          >
-            50
-          </div>
+        <div
+          className="absolute top-8 left-4 text-[18rem] font-bold leading-none text-white opacity-5 pointer-events-none select-none"
+          style={{ fontFamily: "var(--font-barlow-condensed)" }}
+          aria-hidden="true"
+        >
+          50
         </div>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div
@@ -306,7 +296,8 @@ export default function SobreNosotrosClient() {
               className="text-5xl sm:text-7xl lg:text-8xl font-bold text-[#F9FAFB] uppercase leading-tight mb-6"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
-              50 anos<br />
+              50 anos
+              <br />
               <span className="bg-gradient-to-r from-[#FF6B35] to-[#C026D3] bg-clip-text text-transparent">
                 sonorizando
               </span>{" "}
@@ -355,9 +346,39 @@ export default function SobreNosotrosClient() {
       </section>
 
       {/* Mision y valores */}
-      <ValoresSection />
+      <section className="py-20 sm:py-28 bg-[#111827] border-y border-[#374151]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <p className="text-[#FF6B35] text-xs font-bold uppercase tracking-widest mb-3">
+              Lo que nos define
+            </p>
+            <h2
+              className="text-4xl sm:text-5xl font-bold text-[#F9FAFB] uppercase"
+              style={{ fontFamily: "var(--font-barlow-condensed)" }}
+            >
+              Mision y valores
+            </h2>
+            <p className="text-[#9CA3AF] mt-4 max-w-2xl mx-auto text-base">
+              En VCA Sound Systems no vendemos equipos. Vendemos la certeza de
+              que el dia de tu evento todo va a funcionar.
+            </p>
+          </div>
 
-      {/* Mapa de cobertura */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {VALORES.map(({ icon, title, desc }, i) => (
+              <ValorCard
+                key={title}
+                icon={icon}
+                title={title}
+                desc={desc}
+                delay={i * 0.1}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cobertura */}
       <section className="py-20 sm:py-28 bg-[#0A0A0A]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -376,16 +397,9 @@ export default function SobreNosotrosClient() {
             </p>
           </div>
 
-          {/* Grid de ciudades */}
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 mb-12">
             {CIUDADES.map((ciudad, i) => (
-              <div
-                key={ciudad}
-                className="flex flex-col items-center gap-1.5 bg-[#111827] border border-[#374151] rounded-lg p-3 text-center"
-              >
-                <MapPin size={14} className="text-[#FF6B35]" />
-                <span className="text-[#F9FAFB] text-xs font-medium">{ciudad}</span>
-              </div>
+              <CiudadCard key={ciudad} ciudad={ciudad} delay={i * 0.06} />
             ))}
             <div className="flex flex-col items-center gap-1.5 bg-[#FF6B35]/10 border border-[#FF6B35]/30 rounded-lg p-3 text-center">
               <MapPin size={14} className="text-[#FF6B35]" />
@@ -393,7 +407,6 @@ export default function SobreNosotrosClient() {
             </div>
           </div>
 
-          {/* CTA contacto */}
           <div className="text-center">
             <p className="text-[#9CA3AF] text-sm mb-6">
               Organizas un evento fuera de La Rioja? Consultanos. Llevamos el
