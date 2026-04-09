@@ -1,8 +1,8 @@
-import { Volume2, Lightbulb, Monitor, Radio, Building2, Mic, LucideIcon } from "lucide-react";
+export type ServicioIconName = "Volume2" | "Lightbulb" | "Monitor" | "Radio" | "Building2" | "Mic";
 
 export interface Servicio {
   slug: string;
-  icon: LucideIcon;
+  iconName: ServicioIconName;
   titulo: string;
   subtitulo: string;
   descripcionCorta: string;
@@ -28,7 +28,7 @@ export interface Servicio {
 export const SERVICIOS: Servicio[] = [
   {
     slug: "sonido-profesional-eventos",
-    icon: Volume2,
+    iconName: "Volume2",
     titulo: "Sonido Profesional para Eventos",
     subtitulo: "Sistemas de PA de primera linea para cualquier escala",
     descripcionCorta:
@@ -99,7 +99,7 @@ export const SERVICIOS: Servicio[] = [
   },
   {
     slug: "iluminacion-profesional-eventos",
-    icon: Lightbulb,
+    iconName: "Lightbulb" as const,
     titulo: "Iluminacion Profesional para Eventos",
     subtitulo: "Disenos de luz que transforman cualquier espacio",
     descripcionCorta:
@@ -167,7 +167,7 @@ export const SERVICIOS: Servicio[] = [
   },
   {
     slug: "videoproyeccion-pantalla-led",
-    icon: Monitor,
+    iconName: "Monitor" as const,
     titulo: "Videoproyeccion y Pantalla LED para Eventos",
     subtitulo: "Imagen de alta resolucion en cualquier escala",
     descripcionCorta:
@@ -235,7 +235,7 @@ export const SERVICIOS: Servicio[] = [
   },
   {
     slug: "streaming-retransmision-eventos",
-    icon: Radio,
+    iconName: "Radio" as const,
     titulo: "Streaming y Retransmision de Eventos en Directo",
     subtitulo: "Tu evento, en directo para todo el mundo",
     descripcionCorta:
@@ -303,7 +303,7 @@ export const SERVICIOS: Servicio[] = [
   },
   {
     slug: "estructuras-escenarios",
-    icon: Building2,
+    iconName: "Building2" as const,
     titulo: "Estructuras y Escenarios para Eventos",
     subtitulo: "Truss, Ground Support y escenarios adaptables a cualquier recinto",
     descripcionCorta:
@@ -370,7 +370,7 @@ export const SERVICIOS: Servicio[] = [
   },
   {
     slug: "grabacion-eventos",
-    icon: Mic,
+    iconName: "Mic" as const,
     titulo: "Grabacion de Eventos y Videos Corporativos",
     subtitulo: "Tu evento, documentado con calidad profesional",
     descripcionCorta:
@@ -442,9 +442,9 @@ export function getServicio(slug: string): Servicio | undefined {
 }
 
 export function getServiciosResumen() {
-  return SERVICIOS.map(({ slug, icon, titulo, descripcionCorta }) => ({
+  return SERVICIOS.map(({ slug, iconName, titulo, descripcionCorta }) => ({
     slug,
-    icon,
+    iconName,
     titulo,
     descripcionCorta,
   }));
