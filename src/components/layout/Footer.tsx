@@ -4,11 +4,11 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 const SERVICIOS = [
   { label: "Sonido Profesional", href: "/servicios/sonido-profesional-eventos" },
-  { label: "Iluminacion", href: "/servicios/iluminacion-profesional-eventos" },
-  { label: "Videoproyeccion LED", href: "/servicios/videoproyeccion-pantalla-led" },
+  { label: "Iluminación", href: "/servicios/iluminacion-profesional-eventos" },
+  { label: "Videoproyección LED", href: "/servicios/videoproyeccion-pantalla-led" },
   { label: "Streaming", href: "/servicios/streaming-retransmision-eventos" },
   { label: "Estructuras y Escenarios", href: "/servicios/estructuras-escenarios" },
-  { label: "Grabacion", href: "/servicios/grabacion-eventos" },
+  { label: "Grabación", href: "/servicios/grabacion-eventos" },
 ];
 
 const EMPRESA = [
@@ -19,7 +19,7 @@ const EMPRESA = [
 ];
 
 const LEGALES = [
-  { label: "Politica de Privacidad", href: "/privacidad" },
+  { label: "Política de Privacidad", href: "/privacidad" },
   { label: "Aviso Legal", href: "/aviso-legal" },
   { label: "Cookies", href: "/cookies" },
 ];
@@ -31,7 +31,7 @@ export default function Footer() {
     <footer className="bg-[#111827] border-t border-[#374151]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Columna 1 — Logo + descripcion */}
+          {/* Columna 1 — Logo + descripción */}
           <div className="lg:col-span-1">
             <Link href="/">
               <Image
@@ -43,7 +43,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-[#9CA3AF] text-sm leading-relaxed mb-6">
-              50 anos haciendo que los eventos suenen diferente. Sonido, iluminacion y video profesional en toda Espana.
+              50 años haciendo que los eventos suenen diferente. Sonido, iluminación y video profesional en toda España.
             </p>
             <div className="flex items-center gap-4">
               <a
@@ -139,8 +139,8 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-[#FF6B35] mt-0.5 flex-shrink-0" />
                 <span className="text-[#9CA3AF] text-sm">
-                  Logrono, La Rioja<br />
-                  Espana — Cobertura nacional
+                  Logroño, La Rioja<br />
+                  España — Cobertura nacional
                 </span>
               </li>
               <li className="flex items-center gap-3">

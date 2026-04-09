@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFloat from "@/components/layout/WhatsAppFloat";
+import CookieBanner from "@/components/layout/CookieBanner";
 import { Analytics } from "@vercel/analytics/react";
 
 const barlowCondensed = Barlow_Condensed({
@@ -23,19 +24,19 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://vca-soundsystems.es"),
   title: {
-    default: "VCA Sound Systems — Sonido e Iluminacion Profesional Logrono",
+    default: "VCA Sound Systems — Sonido e Iluminación Profesional Logroño",
     template: "%s | VCA Sound Systems",
   },
   description:
-    "Empresa lider en alquiler y venta de equipos de sonido, iluminacion y video para eventos en La Rioja y toda Espana. 50 anos de experiencia. JBL, QSC, Shure.",
+    "Empresa lider en alquiler y venta de equipos de sonido, iluminación y video para eventos en La Rioja y toda España. 50 años de experiencia. JBL, QSC, Shure.",
   keywords: [
-    "sonido profesional logrono",
+    "sonido profesional logroño",
     "alquiler sonido rioja",
-    "iluminacion eventos logrono",
+    "iluminación eventos logroño",
     "pantalla led eventos",
     "equipos audiovisuales rioja",
     "empresa sonido rioja",
-    "sonorizacion eventos espana",
+    "sonorización eventos españa",
   ],
   authors: [{ name: "VCA Sound Systems" }],
   creator: "VCA Sound Systems",
@@ -44,9 +45,9 @@ export const metadata: Metadata = {
     locale: "es_ES",
     url: "https://vca-soundsystems.es",
     siteName: "VCA Sound Systems",
-    title: "VCA Sound Systems — Sonido e Iluminacion Profesional Logrono",
+    title: "VCA Sound Systems — Sonido e Iluminación Profesional Logroño",
     description:
-      "50 anos haciendo que los eventos suenen diferente. Sonido, iluminacion y video profesional para festivales, conciertos y eventos corporativos en toda la Peninsula.",
+      "50 años haciendo que los eventos suenen diferente. Sonido, iluminación y video profesional para festivales, conciertos y eventos corporativos en toda la Península.",
     images: [
       {
         url: "/images/og-default.jpg",
@@ -58,9 +59,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "VCA Sound Systems — Sonido e Iluminacion Profesional",
+    title: "VCA Sound Systems — Sonido e Iluminación Profesional",
     description:
-      "50 anos de experiencia en sonido, iluminacion y video para eventos en toda Espana.",
+      "50 años de experiencia en sonido, iluminación y video para eventos en toda España.",
   },
   robots: {
     index: true,
@@ -84,20 +85,20 @@ const localBusinessSchema = {
   "@id": "https://vca-soundsystems.es",
   name: "VCA Sound Systems",
   description:
-    "Empresa de sonido e iluminacion profesional para eventos. 50 anos de experiencia en La Rioja y toda Espana.",
+    "Empresa de sonido e iluminación profesional para eventos. 50 años de experiencia en La Rioja y toda España.",
   foundingDate: "1975",
   url: "https://vca-soundsystems.es",
   telephone: "+34610325421",
   email: "ecentenorobles@gmail.com",
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Logrono",
+    addressLocality: "Logroño",
     addressRegion: "La Rioja",
     addressCountry: "ES",
   },
   areaServed: {
     "@type": "Country",
-    name: "Espana",
+    name: "España",
   },
   sameAs: [
     "https://www.facebook.com/vcasoundsystems",
@@ -137,6 +138,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <WhatsAppFloat />
+        <CookieBanner />
         <Analytics />
       </body>
     </html>
