@@ -49,19 +49,19 @@ const RANGOS_ASISTENTES = [
 
 const SERVICIOS_DISPONIBLES = [
   { id: "sonido", label: "Sonido", icon: Volume2 },
-  { id: "iluminacion", label: "Iluminacion", icon: Lightbulb },
-  { id: "video-led", label: "Videoproyeccion o LED", icon: Monitor },
+  { id: "iluminación", label: "Iluminación", icon: Lightbulb },
+  { id: "video-led", label: "Videoproyección o LED", icon: Monitor },
   { id: "streaming", label: "Streaming", icon: Radio },
   { id: "estructuras", label: "Estructuras y escenario", icon: Layers },
-  { id: "traduccion", label: "Traduccion simultanea", icon: Globe },
-  { id: "grabacion", label: "Grabacion", icon: Mic },
+  { id: "traducción", label: "Traducción simultánea", icon: Globe },
+  { id: "grabación", label: "Grabación", icon: Mic },
 ];
 
 const DURACIONES = [
-  { id: "1-dia", label: "1 dia" },
-  { id: "2-3-dias", label: "2 – 3 dias" },
-  { id: "4-mas-dias", label: "4+ dias" },
-  { id: "permanente", label: "Instalacion permanente" },
+  { id: "1-día", label: "1 día" },
+  { id: "2-3-días", label: "2 – 3 días" },
+  { id: "4-más-días", label: "4+ días" },
+  { id: "permanente", label: "Instalación permanente" },
 ];
 
 // ─── Validacion ───────────────────────────────────────────────────────────────
@@ -140,7 +140,7 @@ export default function CalculadoraPresupuesto() {
 
   const TOTAL_STEPS = 6;
 
-  // Pre-seleccion desde query params (/sectores/festival → ?sector=festival)
+  // Pre-selección desde query params (/sectores/festival → ?sector=festival)
   useEffect(() => {
     const sector = searchParams.get("sector");
     const servicio = searchParams.get("servicio");
@@ -260,7 +260,7 @@ export default function CalculadoraPresupuesto() {
             >
               <StepTitle
                 title="Numero de asistentes"
-                subtitle="El aforo nos ayuda a dimensionar el equipo tecnico necesario"
+                subtitle="El aforo nos ayuda a dimensionar el equipo técnico necesario"
               />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {RANGOS_ASISTENTES.map(({ id, label, sublabel }) => (
@@ -362,7 +362,7 @@ export default function CalculadoraPresupuesto() {
             >
               <StepTitle
                 title="Duracion del evento"
-                subtitle="El numero de dias afecta al montaje, desmontaje y soporte tecnico"
+                subtitle="El numero de días afecta al montaje, desmontaje y soporte técnico"
               />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {DURACIONES.map(({ id, label }) => (
@@ -411,7 +411,7 @@ export default function CalculadoraPresupuesto() {
                 subtitle="Te enviamos el presupuesto personalizado en menos de 24 horas"
               />
 
-              {/* Resumen de seleccion */}
+              {/* Resumen de selección */}
               <div className="bg-[#111827] border border-[#374151] rounded-lg p-4 mb-6 text-sm text-[#9CA3AF] grid grid-cols-2 gap-2">
                 <div>
                   <span className="text-[#F9FAFB] font-medium">Evento:</span>{" "}
@@ -528,12 +528,12 @@ export default function CalculadoraPresupuesto() {
                 {/* Mensaje */}
                 <div className="sm:col-span-2">
                   <label className="block text-xs font-semibold text-[#9CA3AF] uppercase tracking-wide mb-1.5">
-                    Informacion adicional
+                    Información adicional
                   </label>
                   <textarea
                     {...register("mensaje")}
                     rows={3}
-                    placeholder="Cuéntanos mas sobre tu evento, requerimientos especiales, rider técnico..."
+                    placeholder="Cuéntanos más sobre tu evento, requerimientos especiales, rider técnico..."
                     className="w-full bg-[#111827] border border-[#374151] rounded-lg px-4 py-3 text-[#F9FAFB] text-sm placeholder-[#4B5563] outline-none transition-colors focus:border-[#FF6B35] resize-none"
                   />
                 </div>

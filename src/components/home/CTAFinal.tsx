@@ -33,7 +33,7 @@ export default function CTAFinal() {
           transition={{ duration: 0.5 }}
           className="text-[#FF6B35] text-xs font-semibold uppercase tracking-widest mb-5"
         >
-          Hablemos de tu proximo evento
+          Hablemos de tu próximo evento
         </motion.p>
 
         {/* Headline */}
@@ -59,7 +59,7 @@ export default function CTAFinal() {
           className="text-[#9CA3AF] text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Cuantenos su proyecto. En menos de 24 horas le enviamos un presupuesto detallado
-          sin compromiso. 50 anos de experiencia a su servicio en toda la Peninsula.
+          sin compromiso. 50 años de experiencia a su servicio en toda la Península.
         </motion.p>
 
         {/* CTAs */}

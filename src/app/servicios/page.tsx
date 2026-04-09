@@ -4,16 +4,16 @@ import { ArrowRight } from "lucide-react";
 import ServiciosGrid from "@/components/servicios/ServiciosGrid";
 
 export const metadata: Metadata = {
-  title: "Servicios de Sonido e Iluminacion para Eventos — VCA Sound Systems",
+  title: "Servicios de Sonido e Iluminación para Eventos — VCA Sound Systems",
   description:
-    "Alquiler e instalacion de sonido, iluminacion, videoproyeccion, streaming y estructuras para festivales, eventos corporativos y conciertos en La Rioja y toda Espana.",
+    "Alquiler e instalación de sonido, iluminación, videoproyección, streaming y estructuras para festivales, eventos corporativos y conciertos en La Rioja y toda España.",
   alternates: {
     canonical: "https://vca-soundsystems.es/servicios",
   },
   openGraph: {
-    title: "Servicios de Sonido e Iluminacion para Eventos — VCA Sound Systems",
+    title: "Servicios de Sonido e Iluminación para Eventos — VCA Sound Systems",
     description:
-      "6 servicios integrales para cualquier tipo de evento. Sonido JBL, iluminacion MA Lighting, streaming multicamara y mas. 50 anos de experiencia en La Rioja.",
+      "6 servicios integrales para cualquier tipo de evento. Sonido JBL, iluminación MA Lighting, streaming multicamara y más. 50 años de experiencia en La Rioja.",
     url: "https://vca-soundsystems.es/servicios",
   },
 };
@@ -22,7 +22,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Servicios de VCA Sound Systems",
-  description: "Servicios profesionales de sonido, iluminacion y video para eventos",
+  description: "Servicios profesionales de sonido, iluminación y video para eventos",
   url: "https://vca-soundsystems.es/servicios",
   itemListElement: [
     {
@@ -34,19 +34,19 @@ const serviceSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Iluminacion Profesional para Eventos",
+      name: "Iluminación Profesional para Eventos",
       url: "https://vca-soundsystems.es/servicios/iluminacion-profesional-eventos",
     },
     {
       "@type": "ListItem",
       position: 3,
-      name: "Videoproyeccion y Pantalla LED",
+      name: "Videoproyección y Pantalla LED",
       url: "https://vca-soundsystems.es/servicios/videoproyeccion-pantalla-led",
     },
     {
       "@type": "ListItem",
       position: 4,
-      name: "Streaming y Retransmision de Eventos",
+      name: "Streaming y Retransmisión de Eventos",
       url: "https://vca-soundsystems.es/servicios/streaming-retransmision-eventos",
     },
     {
@@ -58,7 +58,7 @@ const serviceSchema = {
     {
       "@type": "ListItem",
       position: 6,
-      name: "Grabacion de Eventos y Videos Corporativos",
+      name: "Grabación de Eventos y Videos Corporativos",
       url: "https://vca-soundsystems.es/servicios/grabacion-eventos",
     },
   ],
@@ -104,9 +104,9 @@ export default function ServiciosPage() {
               <span className="text-[#9CA3AF]">tu evento</span>
             </h1>
             <p className="text-[#9CA3AF] text-lg sm:text-xl leading-relaxed max-w-2xl">
-              Desde el primer cable hasta el ultimo foco. Llevamos 50 anos haciendo que cada evento
-              suene, se vea y se sienta exactamente como debe. No somos un proveedor mas — somos
-              parte de tu equipo tecnico el dia que mas importa.
+              Desde el primer cable hasta el último foco. Llevamos 50 años haciendo que cada evento
+              suene, se vea y se sienta exactamente como debe. No somos un proveedor más — somos
+              parte de tu equipo técnico el día que más importa.
             </p>
           </div>
         </div>
@@ -134,14 +134,14 @@ export default function ServiciosPage() {
               </h2>
               <p className="text-[#9CA3AF] text-base leading-relaxed mb-8">
                 Cuando nos contratas para tu evento, no firmas un contrato con una empresa de
-                alquiler de equipos. Te incorporas a un equipo tecnico de 50 anos de experiencia
+                alquiler de equipos. Te incorporas a un equipo técnico de 50 años de experiencia
                 que conoce cada escenario, cada sala y cada tipo de evento que se puede producir
-                en La Rioja y en la Peninsula.
+                en La Rioja y en la Península.
               </p>
               <p className="text-[#9CA3AF] text-base leading-relaxed">
-                El dia de tu evento no eres un cliente — eres el centro de todo lo que hacemos.
-                Llegamos antes, nos quedamos hasta que el ultimo asistente se va y resolvemos
-                cualquier imprevisto antes de que el publico lo note.
+                El día de tu evento no eres un cliente — eres el centro de todo lo que hacemos.
+                Llegamos antes, nos quedamos hasta que el último asistente se va y resolvemos
+                cualquier imprevisto antes de que el público lo note.
               </p>
             </div>
 
@@ -149,23 +149,23 @@ export default function ServiciosPage() {
               {[
                 {
                   numero: "50",
-                  unidad: "anos",
-                  descripcion: "de experiencia en produccion de eventos en vivo",
+                  unidad: "años",
+                  descripción: "de experiencia en producción de eventos en vivo",
                 },
                 {
                   numero: "+1.000",
                   unidad: "eventos",
-                  descripcion: "sonorizados y producidos en toda Espana",
+                  descripción: "sonorizados y producidos en toda España",
                 },
                 {
                   numero: "6",
                   unidad: "servicios",
-                  descripcion: "integrales bajo un mismo equipo tecnico",
+                  descripción: "integrales bajo un mismo equipo técnico",
                 },
                 {
                   numero: "100%",
-                  unidad: "Peninsula",
-                  descripcion: "cobertura nacional de servicio tecnico",
+                  unidad: "Península",
+                  descripción: "cobertura nacional de servicio técnico",
                 },
               ].map((stat) => (
                 <div
@@ -186,7 +186,7 @@ export default function ServiciosPage() {
                       {stat.unidad}
                     </span>
                   </div>
-                  <p className="text-[#9CA3AF] text-sm leading-relaxed">{stat.descripcion}</p>
+                  <p className="text-[#9CA3AF] text-sm leading-relaxed">{stat.descripción}</p>
                 </div>
               ))}
             </div>
@@ -204,7 +204,7 @@ export default function ServiciosPage() {
             Cuéntanos tu evento
           </h2>
           <p className="text-[#9CA3AF] text-lg mb-8 max-w-xl mx-auto">
-            Respondemos en menos de 24 horas con una propuesta tecnica adaptada a tu produccion
+            Respondemos en menos de 24 horas con una propuesta técnica adaptada a tu producción
             y tu presupuesto.
           </p>
           <Link

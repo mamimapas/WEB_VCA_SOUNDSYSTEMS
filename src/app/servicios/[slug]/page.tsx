@@ -62,7 +62,7 @@ export default async function ServicioPage({ params }: Props) {
     },
     areaServed: {
       "@type": "Country",
-      name: "Espana",
+      name: "España",
     },
   };
 
@@ -194,14 +194,14 @@ export default async function ServicioPage({ params }: Props) {
                   </div>
                   <div className="text-center">
                     <p className="text-[#F9FAFB] text-xs font-semibold">{marca.nombre}</p>
-                    <p className="text-[#9CA3AF] text-xs">{marca.categoria}</p>
+                    <p className="text-[#9CA3AF] text-xs">{marca.categoría}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             <p className="text-center text-[#9CA3AF] text-sm mt-10">
-              Distribuidores oficiales en La Rioja y norte de Espana.{" "}
+              Distribuidores oficiales en La Rioja y norte de España.{" "}
               <Link href="/marcas" className="text-[#FF6B35] hover:underline">
                 Ver todas las marcas
               </Link>
@@ -243,7 +243,7 @@ export default async function ServicioPage({ params }: Props) {
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={proyecto.imagen}
-                    alt={`${proyecto.titulo} — produccion audiovisual por VCA Sound Systems`}
+                    alt={`${proyecto.titulo} — producción audiovisual por VCA Sound Systems`}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -252,7 +252,7 @@ export default async function ServicioPage({ params }: Props) {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-transparent to-transparent" />
                   <div className="absolute top-4 left-4">
                     <span className="inline-block px-3 py-1 bg-[#FF6B35] text-white text-xs font-semibold uppercase tracking-wide rounded-sm">
-                      {proyecto.categoria}
+                      {proyecto.categoría}
                     </span>
                   </div>
                 </div>
@@ -265,7 +265,7 @@ export default async function ServicioPage({ params }: Props) {
                     {proyecto.titulo}
                   </h3>
                   <p className="text-[#9CA3AF] text-sm leading-relaxed mb-4">
-                    {proyecto.descripcion}
+                    {proyecto.descripción}
                   </p>
 
                   <div className="flex items-center gap-4 pt-4 border-t border-[#374151]">
@@ -275,7 +275,7 @@ export default async function ServicioPage({ params }: Props) {
                     </div>
                     <div className="flex items-center gap-1.5 text-[#9CA3AF] text-xs">
                       <Calendar size={12} className="text-[#FF6B35]" aria-hidden="true" />
-                      <span>{proyecto.ano}</span>
+                      <span>{proyecto.año}</span>
                     </div>
                   </div>
                 </div>

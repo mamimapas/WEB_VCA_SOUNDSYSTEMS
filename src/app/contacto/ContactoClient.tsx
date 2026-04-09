@@ -27,10 +27,10 @@ const CONTACT_INFO = [
   },
   {
     icon: MapPin,
-    label: "Ubicacion",
-    value: "Logrono, La Rioja",
-    href: "https://maps.google.com/?q=Logrono,La+Rioja,Espana",
-    desc: "Trabajamos en toda la Peninsula",
+    label: "Ubicación",
+    value: "Logroño, La Rioja",
+    href: "https://maps.google.com/?q=Logroño,La+Rioja,España",
+    desc: "Trabajamos en toda la Península",
   },
   {
     icon: Clock,
@@ -44,7 +44,7 @@ const CONTACT_INFO = [
     label: "WhatsApp",
     value: "610 325 421",
     href: "https://wa.me/+34610325421?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20vuestros%20servicios%20para%20un%20evento.",
-    desc: "El canal mas rapido para respuesta inmediata",
+    desc: "El canal más rápido para respuesta inmediata",
   },
 ];
 
@@ -184,7 +184,7 @@ export default function ContactoClient() {
             Hablemos
           </h1>
           <p className="text-[#9CA3AF] text-lg max-w-xl mx-auto">
-            Cuéntanos tu evento y buscamos juntos la mejor solucion tecnica. Sin
+            Cuéntanos tu evento y buscamos juntos la mejor solución técnica. Sin
             rodeos, sin intermediarios.
           </p>
         </div>
@@ -221,7 +221,7 @@ export default function ContactoClient() {
                   className="text-2xl font-bold text-[#F9FAFB] uppercase mb-6"
                   style={{ fontFamily: "var(--font-barlow-condensed)" }}
                 >
-                  Informacion de contacto
+                  Información de contacto
                 </h2>
                 <div className="flex flex-col gap-5">
                   {CONTACT_INFO.map(({ icon: Icon, label, value, href, desc }) => (
@@ -280,7 +280,7 @@ export default function ContactoClient() {
                 </a>
               </div>
 
-              {/* Mapa Logrono */}
+              {/* Mapa Logroño */}
               <div className="bg-[#111827] border border-[#374151] rounded-2xl overflow-hidden">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47048.19289671127!2d-2.4855699!3d42.4627195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd49b4dca4ef5d5f%3A0x4e95a77f5fca50de!2sLogro%C3%B1o%2C%20La%20Rioja!5e0!3m2!1ses!2ses!4v1712700000000!5m2!1ses!2ses"
@@ -290,13 +290,13 @@ export default function ContactoClient() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="VCA Sound Systems — Logrono, La Rioja"
+                  title="VCA Sound Systems — Logroño, La Rioja"
                   className="grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
                 />
                 <div className="p-4 border-t border-[#374151]">
                   <p className="text-[#9CA3AF] text-xs">
-                    Logrono, La Rioja — Trabajamos en toda la Peninsula Iberica
-                    con equipo tecnico propio.
+                    Logroño, La Rioja — Trabajamos en toda la Península Ibérica
+                    con equipo técnico propio.
                   </p>
                 </div>
               </div>

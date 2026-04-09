@@ -123,7 +123,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${barlowCondensed.variable} ${inter.variable} h-full`}
+      className={`${barlowCondensed.variable} ${inter.variable} h-full overflow-x-clip`}
     >
       <head>
         <script
@@ -133,7 +133,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-[#0A0A0A] text-[#F9FAFB] antialiased">
+      <body className="min-h-full flex flex-col bg-[#0A0A0A] text-[#F9FAFB] antialiased overflow-x-clip max-w-[100vw]">
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />

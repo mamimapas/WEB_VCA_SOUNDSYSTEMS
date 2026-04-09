@@ -6,16 +6,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { Users, Clock, Cpu } from "lucide-react";
-import { CATEGORIAS, TRABAJOS, type Categoria } from "@/data/trabajos";
+import { CATEGORÍAS, TRABAJOS, type Categoría } from "@/data/trabajos";
 
 export default function GaleriaFiltrable() {
-  const [categoriaActiva, setCategoriaActiva] = useState<Categoria>("Todos");
+  const [categoriaActiva, setCategoriaActiva] = useState<Categoría>("Todos");
   const [lightboxIndex, setLightboxIndex] = useState(-1);
 
   const trabajosFiltrados =
     categoriaActiva === "Todos"
       ? TRABAJOS
-      : TRABAJOS.filter((t) => t.categoria === categoriaActiva);
+      : TRABAJOS.filter((t) => t.categoría === categoriaActiva);
 
   const slides = trabajosFiltrados.map((t) => ({ src: t.imagen }));
 
@@ -27,7 +27,7 @@ export default function GaleriaFiltrable() {
     <>
       {/* Filtros */}
       <div className="flex flex-wrap gap-2 mb-10">
-        {CATEGORIAS.map((cat) => {
+        {CATEGORÍAS.map((cat) => {
           const activo = categoriaActiva === cat;
           return (
             <button
@@ -81,7 +81,7 @@ export default function GaleriaFiltrable() {
               <div className="relative overflow-hidden">
                 <Image
                   src={trabajo.imagen}
-                  alt={`${trabajo.titulo} — produccion audiovisual VCA Sound Systems`}
+                  alt={`${trabajo.titulo} — producción audiovisual VCA Sound Systems`}
                   width={600}
                   height={400}
                   className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -94,10 +94,10 @@ export default function GaleriaFiltrable() {
                     Ver foto
                   </span>
                 </div>
-                {/* Badge categoria */}
+                {/* Badge categoría */}
                 <div className="absolute top-3 left-3">
                   <span className="inline-block px-2.5 py-1 bg-[#FF6B35] text-white text-xs font-semibold uppercase tracking-wide rounded-sm">
-                    {trabajo.categoria}
+                    {trabajo.categoría}
                   </span>
                 </div>
               </div>
@@ -111,10 +111,10 @@ export default function GaleriaFiltrable() {
                   {trabajo.titulo}
                 </h3>
                 <p className="text-[#9CA3AF] text-sm leading-relaxed mb-4">
-                  {trabajo.descripcion}
+                  {trabajo.descripción}
                 </p>
 
-                {/* Metricas */}
+                {/* Métricas */}
                 <div className="flex flex-wrap gap-3 pt-4 border-t border-[#374151]">
                   <div className="flex items-center gap-1.5 text-[#9CA3AF] text-xs">
                     <Users

@@ -6,14 +6,14 @@ import MarcasGrid from "@/components/marcas/MarcasGrid";
 export const metadata: Metadata = {
   title: "Distribuidores Oficiales JBL, Shure, QSC en La Rioja — VCA Sound Systems",
   description:
-    "Distribuidores oficiales de JBL, dbx, Shure, QSC, MA Lighting, Soundcraft y Crown en La Rioja y norte de Espana. Primeras marcas del audio profesional a tu alcance.",
+    "Distribuidores oficiales de JBL, dbx, Shure, QSC, MA Lighting, Soundcraft y Crown en La Rioja y norte de España. Primeras marcas del audio profesional a tu alcance.",
   alternates: {
     canonical: "https://vca-soundsystems.es/marcas",
   },
   openGraph: {
     title: "Distribuidores Oficiales JBL, Shure, QSC en La Rioja — VCA Sound Systems",
     description:
-      "11 marcas de primera linea. Distribuidores oficiales en La Rioja. JBL, dbx, Shure, QSC, MA Lighting, Soundcraft, Crown, ElectroVoice, Epson, Panasonic y Prolight.",
+      "11 marcas de primera línea. Distribuidores oficiales en La Rioja. JBL, dbx, Shure, QSC, MA Lighting, Soundcraft, Crown, ElectroVoice, Epson, Panasonic y Prolight.",
     url: "https://vca-soundsystems.es/marcas",
   },
 };
@@ -98,9 +98,9 @@ export default function MarcasPage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[
               { numero: "11", label: "marcas distribuidoras" },
-              { numero: "50+", label: "anos de relacion con fabricantes" },
-              { numero: "La Rioja", label: "y norte de Espana" },
-              { numero: "Oficial", label: "garantia de fabricante incluida" },
+              { numero: "50+", label: "años de relación con fabricantes" },
+              { numero: "La Rioja", label: "y norte de España" },
+              { numero: "Oficial", label: "garantía de fabricante incluida" },
             ].map((item) => (
               <div
                 key={item.label}
@@ -142,17 +142,17 @@ export default function MarcasPage() {
               <p className="text-[#9CA3AF] text-base leading-relaxed mb-6">
                 Cuando el Glastonbury Festival o el O2 Arena de Londres necesitan un sistema de
                 sonido, no llaman a cualquier proveedor. Especifican JBL, QSC o dbx porque la
-                diferencia entre una experiencia de audio mediocre y una que el publico recuerde
-                durante anos se mide en el hardware.
+                diferencia entre una experiencia de audio mediocre y una que el público recuerde
+                durante años se mide en el hardware.
               </p>
               <p className="text-[#9CA3AF] text-base leading-relaxed mb-6">
-                Como distribuidores oficiales en La Rioja y el norte de Espana, podemos ofrecer
-                los mismos sistemas que se usan en los eventos mas grandes del mundo — con
-                garantia oficial del fabricante y soporte tecnico de primer nivel.
+                Como distribuidores oficiales en La Rioja y el norte de España, podemos ofrecer
+                los mismos sistemas que se usan en los eventos más grandes del mundo — con
+                garantía oficial del fabricante y soporte técnico de primer nivel.
               </p>
               <p className="text-[#9CA3AF] text-base leading-relaxed">
                 Tanto si necesitas un sistema de sonido JBL para un festival de 10.000 personas
-                como una consola MA Lighting para un espectaculo de iluminacion de alta exigencia,
+                como una consola MA Lighting para un espectáculo de iluminación de alta exigencia,
                 tenemos el equipo y el conocimiento para hacerlo bien.
               </p>
             </div>
@@ -160,23 +160,23 @@ export default function MarcasPage() {
             <div className="space-y-4">
               {[
                 {
-                  titulo: "Garantia oficial de fabricante",
-                  descripcion:
-                    "Al ser distribuidores oficiales, todos los equipos tienen garantia directa del fabricante. Sin intermediarios, sin letra pequena.",
+                  titulo: "Garantía oficial de fabricante",
+                  descripción:
+                    "Al ser distribuidores oficiales, todos los equipos tienen garantía directa del fabricante. Sin intermediarios, sin letra pequena.",
                 },
                 {
                   titulo: "Equipos siempre en stock",
-                  descripcion:
-                    "Mantenemos inventario propio de los modelos mas demandados para poder servir en los plazos que requiere cualquier produccion.",
+                  descripción:
+                    "Mantenemos inventario propio de los modelos más demandados para poder servir en los plazos que requiere cualquier producción.",
                 },
                 {
-                  titulo: "Soporte tecnico especializado",
-                  descripcion:
-                    "Nuestro equipo tecnico conoce a fondo cada pieza de equipamiento que distribuimos. No solo vendemos — formamos y damos soporte.",
+                  titulo: "Soporte técnico especializado",
+                  descripción:
+                    "Nuestro equipo técnico conoce a fondo cada pieza de equipamiento que distribuimos. No solo vendemos — formamos y damos soporte.",
                 },
                 {
                   titulo: "Acceso a ultimas novedades",
-                  descripcion:
+                  descripción:
                     "Como distribuidores, tenemos acceso prioritario a las nuevas referencias antes de que lleguen al mercado general.",
                 },
               ].map((item) => (
@@ -190,7 +190,7 @@ export default function MarcasPage() {
                   >
                     {item.titulo}
                   </h3>
-                  <p className="text-[#9CA3AF] text-sm leading-relaxed">{item.descripcion}</p>
+                  <p className="text-[#9CA3AF] text-sm leading-relaxed">{item.descripción}</p>
                 </div>
               ))}
             </div>
@@ -205,10 +205,10 @@ export default function MarcasPage() {
             className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#F9FAFB] uppercase mb-4"
             style={{ fontFamily: "var(--font-barlow-condensed)" }}
           >
-            Solicita informacion
+            Solicita información
           </h2>
           <p className="text-[#9CA3AF] text-lg mb-8 max-w-xl mx-auto">
-            Tanto si quieres contratar un servicio como si necesitas informacion sobre una marca
+            Tanto si quieres contratar un servicio como si necesitas información sobre una marca
             o un equipo especifico, estamos disponibles para ayudarte.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

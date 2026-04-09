@@ -7,19 +7,19 @@ import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { MARCAS_DISTRIBUIDORAS, CATEGORIAS_MARCAS } from "@/data/marcas";
 
-type Categoria = (typeof CATEGORIAS_MARCAS)[number] | "Todas";
+type Categoría = (typeof CATEGORIAS_MARCAS)[number] | "Todas";
 
 export default function MarcasGrid() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
-  const [categoriaActiva, setCategoriaActiva] = useState<Categoria>("Todas");
+  const [categoriaActiva, setCategoriaActiva] = useState<Categoría>("Todas");
 
-  const categorias: Categoria[] = ["Todas", ...CATEGORIAS_MARCAS];
+  const categorías: Categoría[] = ["Todas", ...CATEGORIAS_MARCAS];
 
   const marcasFiltradas =
     categoriaActiva === "Todas"
       ? MARCAS_DISTRIBUIDORAS
-      : MARCAS_DISTRIBUIDORAS.filter((m) => m.categoria === categoriaActiva);
+      : MARCAS_DISTRIBUIDORAS.filter((m) => m.categoría === categoriaActiva);
 
   return (
     <section ref={ref} className="py-16 pb-20 bg-[#0A0A0A]">
@@ -32,9 +32,9 @@ export default function MarcasGrid() {
           transition={{ duration: 0.5 }}
           className="flex flex-wrap gap-2 mb-10"
           role="tablist"
-          aria-label="Filtrar marcas por categoria"
+          aria-label="Filtrar marcas por categoría"
         >
-          {categorias.map((cat) => (
+          {categorías.map((cat) => (
             <button
               key={cat}
               role="tab"
@@ -55,7 +55,7 @@ export default function MarcasGrid() {
         <div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
           role="tabpanel"
-          aria-label={`Marcas de la categoria ${categoriaActiva}`}
+          aria-label={`Marcas de la categoría ${categoriaActiva}`}
         >
           {marcasFiltradas.map((marca, index) => (
             <motion.article
@@ -77,10 +77,10 @@ export default function MarcasGrid() {
                 />
               </div>
 
-              {/* Badge categoria */}
+              {/* Badge categoría */}
               <div className="mb-3">
                 <span className="inline-block px-2.5 py-1 bg-[#FF6B35]/10 text-[#FF6B35] text-xs font-semibold uppercase tracking-wide rounded-sm">
-                  {marca.categoria}
+                  {marca.categoría}
                 </span>
               </div>
 
@@ -92,9 +92,9 @@ export default function MarcasGrid() {
                 {marca.nombre}
               </h2>
 
-              {/* Descripcion */}
+              {/* Descripción */}
               <p className="text-[#9CA3AF] text-sm leading-relaxed mb-5 flex-1">
-                {marca.descripcion}
+                {marca.descripción}
               </p>
 
               {/* Servicios relacionados */}
@@ -122,7 +122,7 @@ export default function MarcasGrid() {
                 href="/contacto"
                 className="inline-flex items-center gap-1.5 text-[#FF6B35] text-xs font-semibold uppercase tracking-wide group-hover:gap-2.5 transition-all duration-200 mt-auto"
               >
-                Solicitar informacion
+                Solicitar información
                 <ArrowRight size={11} />
               </Link>
             </motion.article>
@@ -132,7 +132,7 @@ export default function MarcasGrid() {
         {/* Mensaje si no hay resultados */}
         {marcasFiltradas.length === 0 && (
           <p className="text-center text-[#9CA3AF] py-16">
-            No hay marcas en esta categoria. Prueba otra opcion.
+            No hay marcas en esta categoría. Prueba otra opcion.
           </p>
         )}
       </div>
@@ -143,11 +143,11 @@ export default function MarcasGrid() {
 function formatSlug(slug: string): string {
   const nombres: Record<string, string> = {
     "sonido-profesional-eventos": "Sonido",
-    "iluminacion-profesional-eventos": "Iluminacion",
+    "iluminacion-profesional-eventos": "Iluminación",
     "videoproyeccion-pantalla-led": "Video LED",
     "streaming-retransmision-eventos": "Streaming",
     "estructuras-escenarios": "Estructuras",
-    "grabacion-eventos": "Grabacion",
+    "grabacion-eventos": "Grabación",
   };
   return nombres[slug] ?? slug;
 }

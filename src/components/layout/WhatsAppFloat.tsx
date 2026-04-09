@@ -13,7 +13,7 @@ export default function WhatsAppFloat() {
   if (!visible) return null;
 
   const message = encodeURIComponent(
-    "Hola, me gustaria solicitar informacion sobre sonido e iluminacion para mi evento."
+    "Hola, me gustaria solicitar información sobre sonido e iluminación para mi evento."
   );
   const href = `https://wa.me/+34610325421?text=${message}`;
 

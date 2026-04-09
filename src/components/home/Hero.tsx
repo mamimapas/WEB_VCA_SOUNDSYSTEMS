@@ -29,7 +29,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#FF6B35]/40 bg-[#FF6B35]/10 text-[#FF6B35] text-xs font-semibold uppercase tracking-widest mb-8"
         >
           <Play size={10} fill="currentColor" />
-          Desde 1975 — 50 anos de experiencia
+          Desde 1975 — 50 años de experiencia
         </motion.div>
 
         {/* Headline */}
@@ -40,7 +40,7 @@ export default function Hero() {
           className="font-heading text-6xl sm:text-7xl lg:text-9xl font-bold text-[#F9FAFB] leading-none tracking-tight mb-6 uppercase"
           style={{ fontFamily: "var(--font-barlow-condensed)" }}
         >
-          50 Anos Haciendo{" "}
+          50 Años Haciendo{" "}
           <span className="bg-gradient-to-r from-[#FF6B35] to-[#C026D3] bg-clip-text text-transparent">
             Que los Eventos
           </span>{" "}
@@ -54,8 +54,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-[#9CA3AF] text-lg sm:text-xl lg:text-2xl max-w-3xl mx-auto mb-10 leading-relaxed"
         >
-          Sonido, iluminacion y video profesional para festivales, conciertos y eventos
-          corporativos en toda la Peninsula. El dia de tu evento, somos parte de tu equipo.
+          Sonido, iluminación y video profesional para festivales, conciertos y eventos
+          corporativos en toda la Península. El día de tu evento, somos parte de tu equipo.
         </motion.p>
 
         {/* CTAs */}

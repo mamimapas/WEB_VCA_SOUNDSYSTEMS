@@ -10,23 +10,23 @@ const SERVICIOS = [
     icon: Volume2,
     title: "Sonido Profesional",
     description:
-      "Sistemas de PA de primera linea — JBL, QSC, dbx — para eventos de cualquier escala. Desde 200 hasta 50.000 asistentes.",
+      "Sistemas de PA de primera línea — JBL, QSC, dbx — para eventos de cualquier escala. Desde 200 hasta 50.000 asistentes.",
     href: "/servicios/sonido-profesional-eventos",
     size: "col-span-2 lg:col-span-1",
   },
   {
     icon: Lightbulb,
-    title: "Iluminacion",
+    title: "Iluminación",
     description:
-      "Disenos de iluminacion que transforman cualquier espacio. Cabezas moviles, LED, wash, beam y efectos especiales.",
+      "Diseños de iluminación que transforman cualquier espacio. Cabezas moviles, LED, wash, beam y efectos especiales.",
     href: "/servicios/iluminacion-profesional-eventos",
     size: "col-span-2 lg:col-span-1",
   },
   {
     icon: Monitor,
-    title: "Videoproyeccion y Pantalla LED",
+    title: "Videoproyección y Pantalla LED",
     description:
-      "Pantallas LED indoor/outdoor de alta resolucion y sistemas de videoproyeccion para conferencias, festivales y galas.",
+      "Pantallas LED indoor/outdoor de alta resolución y sistemas de videoproyección para conferencias, festivales y galas.",
     href: "/servicios/videoproyeccion-pantalla-led",
     size: "col-span-2 lg:col-span-1",
   },
@@ -34,7 +34,7 @@ const SERVICIOS = [
     icon: Radio,
     title: "Streaming en Directo",
     description:
-      "Retransmision profesional de eventos en directo. Multicamara, codificacion HD y distribucion a cualquier plataforma.",
+      "Retransmisión profesional de eventos en directo. Multicamara, codificacion HD y distribucion a cualquier plataforma.",
     href: "/servicios/streaming-retransmision-eventos",
     size: "col-span-2 lg:col-span-1",
   },
@@ -48,9 +48,9 @@ const SERVICIOS = [
   },
   {
     icon: Mic,
-    title: "Grabacion",
+    title: "Grabación",
     description:
-      "Grabacion multicanal de eventos, videoclips corporativos y directos de audio en nuestro estudio propio.",
+      "Grabación multicanal de eventos, videoclips corporativos y directos de audio en nuestro estudio propio.",
     href: "/servicios/grabacion-eventos",
     size: "col-span-2 lg:col-span-1",
   },
@@ -81,8 +81,8 @@ export default function ServiciosBento() {
             <span className="text-[#9CA3AF]">bajo un mismo equipo</span>
           </h2>
           <p className="text-[#9CA3AF] text-lg max-w-2xl leading-relaxed">
-            No somos un proveedor mas. El dia de tu evento, nos convertimos en parte de tu equipo tecnico.
-            50 anos de experiencia respaldan cada show.
+            No somos un proveedor más. El día de tu evento, nos convertimos en parte de tu equipo técnico.
+            50 años de experiencia respaldan cada show.
           </p>
         </motion.div>
 
@@ -124,7 +124,7 @@ export default function ServiciosBento() {
 
                   {/* Link indicator */}
                   <div className="flex items-center gap-1 text-[#FF6B35] text-xs font-semibold uppercase tracking-wide group-hover:gap-2 transition-all duration-200">
-                    Ver mas
+                    Ver más
                     <ArrowRight size={12} />
                   </div>
                 </Link>

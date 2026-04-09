@@ -3,9 +3,9 @@ import { Suspense } from "react";
 import CalculadoraPresupuesto from "@/components/presupuesto/CalculadoraPresupuesto";
 
 export const metadata: Metadata = {
-  title: "Solicitar Presupuesto — Calculadora de Sonido e Iluminacion",
+  title: "Solicitar Presupuesto — Calculadora de Sonido e Iluminación",
   description:
-    "Solicita un presupuesto personalizado para tu evento en pocos pasos. Sonido, iluminacion, streaming, estructuras y mas. Respuesta garantizada en menos de 24 horas.",
+    "Solicita un presupuesto personalizado para tu evento en pocos pasos. Sonido, iluminación, streaming, estructuras y más. Respuesta garantizada en menos de 24 horas.",
   alternates: {
     canonical: "https://vca-soundsystems.es/presupuesto",
   },
@@ -23,7 +23,7 @@ const presupuestoSchema = {
   "@id": "https://vca-soundsystems.es/presupuesto",
   name: "Solicitar Presupuesto — VCA Sound Systems",
   description:
-    "Formulario de solicitud de presupuesto para equipos de sonido, iluminacion y video profesional para eventos.",
+    "Formulario de solicitud de presupuesto para equipos de sonido, iluminación y video profesional para eventos.",
   url: "https://vca-soundsystems.es/presupuesto",
   provider: {
     "@id": "https://vca-soundsystems.es",
@@ -69,12 +69,12 @@ export default function PresupuestoPage() {
             </Suspense>
           </div>
 
-          {/* Garantias debajo del formulario */}
+          {/* Garantías debajo del formulario */}
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
             {[
-              { label: "Respuesta en 24h", desc: "Te contactamos el mismo dia laboral" },
+              { label: "Respuesta en 24h", desc: "Te contactamos el mismo día laboral" },
               { label: "Sin compromiso", desc: "Pedir presupuesto no te obliga a nada" },
-              { label: "Atencion directa", desc: "Hablas con el tecnico, no con un bot" },
+              { label: "Atención directa", desc: "Hablas con el técnico, no con un bot" },
             ].map(({ label, desc }) => (
               <div key={label} className="bg-[#111827] border border-[#374151] rounded-lg p-4">
                 <p

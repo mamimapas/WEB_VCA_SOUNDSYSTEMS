@@ -10,31 +10,31 @@ const HISTORIAS_DESTACADAS = [
   {
     imagen: "/images/trabajos/evento-03.jpg",
     titulo: "Festival de Jazz Breton",
-    categoria: "Festival",
+    categoría: "Festival",
     asistentes: "5.000",
-    descripcion:
-      "Sonorizacion completa del festival de jazz mas importante de La Rioja. Sistema JBL VTX line array, iluminacion de escenario y streaming en directo.",
-    ano: "2020",
+    descripción:
+      "Sonorización completa del festival de jazz más importante de La Rioja. Sistema JBL VTX line array, iluminación de escenario y streaming en directo.",
+    año: "2020",
     slug: "festival-jazz-breton",
   },
   {
     imagen: "/images/trabajos/evento-08.jpg",
     titulo: "Ezcaray Fest",
-    categoria: "Festival",
+    categoría: "Festival",
     asistentes: "3.500",
-    descripcion:
-      "Diseno integral de sonido e iluminacion para el festival de musica de Ezcaray. Produccion completa de escenario y estructura.",
-    ano: "2020",
+    descripción:
+      "Diseño integral de sonido e iluminación para el festival de música de Ezcaray. Producción completa de escenario y estructura.",
+    año: "2020",
     slug: "ezcaray-fest",
   },
   {
     imagen: "/images/trabajos/evento-05.jpeg",
     titulo: "Gala Citroen",
-    categoria: "Corporativo",
+    categoría: "Corporativo",
     asistentes: "800",
-    descripcion:
-      "Evento corporativo premium para Citroen. Sonido, iluminacion cinematografica, pantalla LED y streaming para distribuidores a nivel nacional.",
-    ano: "2020",
+    descripción:
+      "Evento corporativo premium para Citroen. Sonido, iluminación cinematografica, pantalla LED y streaming para distribuidores a nivel nacional.",
+    año: "2020",
     slug: "gala-citroen",
   },
 ];
@@ -91,7 +91,7 @@ export default function CustomerStories() {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={historia.imagen}
-                  alt={`${historia.titulo} — Produccion audiovisual por VCA Sound Systems`}
+                  alt={`${historia.titulo} — Producción audiovisual por VCA Sound Systems`}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -99,10 +99,10 @@ export default function CustomerStories() {
                 />
                 {/* Overlay degradado */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-transparent to-transparent" />
-                {/* Badge categoria */}
+                {/* Badge categoría */}
                 <div className="absolute top-4 left-4">
                   <span className="inline-block px-3 py-1 bg-[#FF6B35] text-white text-xs font-semibold uppercase tracking-wide rounded-sm">
-                    {historia.categoria}
+                    {historia.categoría}
                   </span>
                 </div>
               </div>
@@ -116,10 +116,10 @@ export default function CustomerStories() {
                   {historia.titulo}
                 </h3>
                 <p className="text-[#9CA3AF] text-sm leading-relaxed mb-4">
-                  {historia.descripcion}
+                  {historia.descripción}
                 </p>
 
-                {/* Metricas */}
+                {/* Métricas */}
                 <div className="flex items-center gap-4 pt-4 border-t border-[#374151]">
                   <div className="flex items-center gap-1.5 text-[#9CA3AF] text-xs">
                     <Users size={12} className="text-[#FF6B35]" aria-hidden="true" />
@@ -127,7 +127,7 @@ export default function CustomerStories() {
                   </div>
                   <div className="flex items-center gap-1.5 text-[#9CA3AF] text-xs">
                     <Calendar size={12} className="text-[#FF6B35]" aria-hidden="true" />
-                    <span>{historia.ano}</span>
+                    <span>{historia.año}</span>
                   </div>
                 </div>
               </div>

@@ -12,51 +12,51 @@ import {
 } from "lucide-react";
 
 // ─── Timeline ─────────────────────────────────────────────────────────────────
-// NOTA: Las fechas de los hitos son aproximaciones basadas en los ~50 anos de
-// trayectoria confirmada (fundacion 1975). Actualizar cuando Eusebio confirme
+// NOTA: Las fechas de los hitos son aproximaciones basadas en los ~50 años de
+// trayectoria confirmada (fundación 1975). Actualizar cuando Eusebio confirme
 // las fechas exactas de cada hito historico.
 
 const TIMELINE = [
   {
     year: "1975",
-    title: "Fundacion en Logrono",
-    desc: "VCA Sound Systems nace en Logrono con la mision de ofrecer sonido profesional a los eventos de La Rioja. Los primeros equipos, la primera huella.",
+    title: "Fundación en Logroño",
+    desc: "VCA Sound Systems nace en Logroño con la misión de ofrecer sonido profesional a los eventos de La Rioja. Los primeros equipos, la primera huella.",
     approximate: false,
   },
   {
     year: "1985",
     title: "Primer gran festival regional",
-    desc: "Sonorizacion del primer festival de musica en directo de alcance regional. Una confirmacion de que el equipo tecnico estaba a la altura de los escenarios mas exigentes.",
+    desc: "Sonorización del primer festival de música en directo de alcance regional. Una confirmacion de que el equipo técnico estaba a la altura de los escenarios más exigentes.",
     approximate: true,
   },
   {
     year: "1995",
-    title: "Equipos digitales de primera generacion",
-    desc: "Incorporacion de las primeras consolas de sonido digitales y sistemas de procesamiento avanzado, marcando el salto hacia la era digital del audio profesional.",
+    title: "Equipos digitales de primera generación",
+    desc: "Incorporación de las primeras consolas de sonido digitales y sistemas de procesamiento avanzado, marcando el salto hacia la era digital del audio profesional.",
     approximate: true,
   },
   {
     year: "2005",
-    title: "Iluminacion profesional y LED",
-    desc: "Ampliacion del catalogo con sistemas de iluminacion profesional y las primeras soluciones LED para escenarios. Un nuevo servicio, la misma exigencia tecnica.",
+    title: "Iluminación profesional y LED",
+    desc: "Ampliación del catalogo con sistemas de iluminación profesional y las primeras soluciones LED para escenarios. Un nuevo servicio, la misma exigencia técnica.",
     approximate: true,
   },
   {
     year: "2015",
     title: "Streaming en directo",
-    desc: "Lanzamiento de los servicios de retransmision en directo. Los eventos de nuestros clientes dejan de tener fronteras geograficas.",
+    desc: "Lanzamiento de los servicios de retransmisión en directo. Los eventos de nuestros clientes dejan de tener fronteras geográficas.",
     approximate: true,
   },
   {
     year: "2020",
-    title: "Pantallas LED y videoproyeccion avanzada",
-    desc: "Nuevas soluciones de pantallas LED de gran formato y videoproyeccion de alta resolucion para festivales, congresos y eventos corporativos de primer nivel.",
+    title: "Pantallas LED y videoproyección avanzada",
+    desc: "Nuevas soluciones de pantallas LED de gran formato y videoproyección de alta resolución para festivales, congresos y eventos corporativos de primer nivel.",
     approximate: true,
   },
   {
     year: "2026",
-    title: "50 anos, la misma pasion",
-    desc: "Medio siglo haciendo que los eventos suenen, brillen y lleguen a cualquier rincon. Mas de 1.000 eventos, 47 provincias y una sola regla: el show siempre debe continuar.",
+    title: "50 años, la misma pasión",
+    desc: "Medio siglo haciendo que los eventos suenen, brillen y lleguen a cualquier rincón. Más de 1.000 eventos, 47 provincias y una sola regla: el show siempre debe continuar.",
     approximate: false,
   },
 ];
@@ -64,38 +64,38 @@ const TIMELINE = [
 const VALORES = [
   {
     icon: ShieldCheck,
-    title: "Garantia el dia del show",
-    desc: "No somos un proveedor mas. Cuando el telon se levanta, somos parte de tu equipo. 50 anos de experiencia respaldan cada decision tecnica.",
+    title: "Garantía el día del show",
+    desc: "No somos un proveedor más. Cuando el telón se levanta, somos parte de tu equipo. 50 años de experiencia respaldan cada decisión técnica.",
   },
   {
     icon: Headphones,
-    title: "Tecnicos especializados",
-    desc: "Cada evento cuenta con tecnicos que conocen el equipo, la sala y las necesidades del espectaculo. La tecnica al servicio de la emocion.",
+    title: "Técnicos especializados",
+    desc: "Cada evento cuenta con técnicos que conocen el equipo, la sala y las necesidades del espectáculo. La técnica al servicio de la emoción.",
   },
   {
     icon: Target,
-    title: "Solucion integral",
-    desc: "Sonido, iluminacion, video, streaming y estructuras bajo un solo equipo. Coordinacion perfecta, un solo interlocutor, cero fricciones.",
+    title: "Solución integral",
+    desc: "Sonido, iluminación, video, streaming y estructuras bajo un solo equipo. Coordinación perfecta, un solo interlocutor, cero fricciones.",
   },
   {
     icon: Users,
-    title: "Relacion a largo plazo",
-    desc: "Nuestros clientes repiten. No porque no tengan opciones, sino porque saben que con VCA el dia del evento no hay sorpresas.",
+    title: "Relación a largo plazo",
+    desc: "Nuestros clientes repiten. No porque no tengan opciones, sino porque saben que con VCA el día del evento no hay sorpresas.",
   },
   {
     icon: Zap,
-    title: "Respuesta rapida",
-    desc: "El mundo del directo no espera. Nuestro equipo esta disponible para urgencias tecnicas y cambios de ultima hora sin incremento de coste.",
+    title: "Respuesta rápida",
+    desc: "El mundo del directo no espera. Nuestro equipo está disponible para urgencias técnicas y cambios de última hora sin incremento de coste.",
   },
   {
     icon: MapPin,
     title: "Cobertura nacional",
-    desc: "Con base en Logrono y presencia en toda la Peninsula Iberica. Llevamos el equipo, el know-how y la garantia tecnica hasta donde lo necesites.",
+    desc: "Con base en Logroño y presencia en toda la Península Ibérica. Llevamos el equipo, el know-how y la garantía técnica hasta donde lo necesites.",
   },
 ];
 
 const CIUDADES = [
-  "Logrono",
+  "Logroño",
   "Madrid",
   "Bilbao",
   "Zaragoza",
@@ -296,17 +296,17 @@ export default function SobreNosotrosClient() {
               className="text-5xl sm:text-7xl lg:text-8xl font-bold text-[#F9FAFB] uppercase leading-tight mb-6"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
-              50 anos
+              50 años
               <br />
               <span className="bg-gradient-to-r from-[#FF6B35] to-[#C026D3] bg-clip-text text-transparent">
                 sonorizando
               </span>{" "}
               <br />
-              La Rioja y Espana
+              La Rioja y España
             </h1>
             <p className="text-[#9CA3AF] text-lg max-w-2xl leading-relaxed">
-              No somos un proveedor mas. Desde 1975, el dia de tu evento somos
-              parte de tu equipo. Mas de 1.000 eventos, 47 provincias y una sola
+              No somos un proveedor más. Desde 1975, el día de tu evento somos
+              parte de tu equipo. Más de 1.000 eventos, 47 provincias y una sola
               regla: el show siempre debe continuar.
             </p>
           </motion.div>
@@ -345,7 +345,7 @@ export default function SobreNosotrosClient() {
         </div>
       </section>
 
-      {/* Mision y valores */}
+      {/* Misión y valores */}
       <section className="py-20 sm:py-28 bg-[#111827] border-y border-[#374151]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
@@ -356,11 +356,11 @@ export default function SobreNosotrosClient() {
               className="text-4xl sm:text-5xl font-bold text-[#F9FAFB] uppercase"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
-              Mision y valores
+              Misión y valores
             </h2>
             <p className="text-[#9CA3AF] mt-4 max-w-2xl mx-auto text-base">
               En VCA Sound Systems no vendemos equipos. Vendemos la certeza de
-              que el dia de tu evento todo va a funcionar.
+              que el día de tu evento todo va a funcionar.
             </p>
           </div>
 
@@ -389,11 +389,11 @@ export default function SobreNosotrosClient() {
               className="text-4xl sm:text-5xl font-bold text-[#F9FAFB] uppercase"
               style={{ fontFamily: "var(--font-barlow-condensed)" }}
             >
-              Toda la Peninsula Iberica
+              Toda la Península Ibérica
             </h2>
             <p className="text-[#9CA3AF] mt-4 max-w-xl mx-auto">
-              Trabajamos en mas de 47 provincias con nuestro propio equipo
-              tecnico y vehiculos especializados. Donde sea tu evento, llegamos.
+              Trabajamos en más de 47 provincias con nuestro propio equipo
+              técnico y vehículos especializados. Donde sea tu evento, llegamos.
             </p>
           </div>
 
@@ -403,14 +403,14 @@ export default function SobreNosotrosClient() {
             ))}
             <div className="flex flex-col items-center gap-1.5 bg-[#FF6B35]/10 border border-[#FF6B35]/30 rounded-lg p-3 text-center">
               <MapPin size={14} className="text-[#FF6B35]" />
-              <span className="text-[#FF6B35] text-xs font-bold">+40 mas</span>
+              <span className="text-[#FF6B35] text-xs font-bold">+40 más</span>
             </div>
           </div>
 
           <div className="text-center">
             <p className="text-[#9CA3AF] text-sm mb-6">
-              Organizas un evento fuera de La Rioja? Consultanos. Llevamos el
-              equipo y el equipo tecnico hasta donde lo necesites.
+              Organizas un evento fuera de La Rioja? Consúltanos. Llevamos el
+              equipo y el equipo técnico hasta donde lo necesites.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

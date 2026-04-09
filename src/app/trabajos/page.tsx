@@ -6,14 +6,14 @@ import GaleriaFiltrable from "@/components/trabajos/GaleriaFiltrable";
 export const metadata: Metadata = {
   title: "Proyectos — Festivales y Eventos Sonorizados por VCA Sound",
   description:
-    "Galeria de proyectos: Festival Jazz Breton, Ezcaray Fest, Gala Citroen, conciertos y eventos institucionales en toda Espana. Mas de 1.000 eventos con sonido profesional.",
+    "Galeria de proyectos: Festival Jazz Breton, Ezcaray Fest, Gala Citroen, conciertos y eventos institucionales en toda España. Más de 1.000 eventos con sonido profesional.",
   alternates: {
     canonical: "https://vca-soundsystems.es/trabajos",
   },
   openGraph: {
     title: "Proyectos — Festivales y Eventos Sonorizados por VCA Sound",
     description:
-      "Galeria de proyectos audiovisuales: festivales, conciertos, eventos corporativos e institucionales. 50 anos de produccion tecnica en toda Espana.",
+      "Galeria de proyectos audiovisuales: festivales, conciertos, eventos corporativos e institucionales. 50 años de producción técnica en toda España.",
     url: "https://vca-soundsystems.es/trabajos",
   },
 };
@@ -38,7 +38,7 @@ export default function TrabajosPage() {
               </span>
             </h1>
             <p className="mt-6 text-[#9CA3AF] text-lg leading-relaxed max-w-2xl">
-              Mas de 1.000 eventos a lo largo de 50 anos. Festivales, conciertos,
+              Más de 1.000 eventos a lo largo de 50 años. Festivales, conciertos,
               galas corporativas, actos institucionales y producciones de streaming.
               Filtra por tipo de evento para encontrar proyectos similares al tuyo.
             </p>
@@ -68,7 +68,7 @@ export default function TrabajosPage() {
       <section className="bg-[#111827] border-t border-[#374151]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <p className="text-[#FF6B35] text-xs font-semibold uppercase tracking-widest mb-4">
-            El proximo puede ser el tuyo
+            El próximo puede ser el tuyo
           </p>
           <h2
             className="text-5xl sm:text-6xl font-bold text-[#F9FAFB] uppercase mb-6"
@@ -78,7 +78,7 @@ export default function TrabajosPage() {
           </h2>
           <p className="text-[#9CA3AF] text-lg mb-10 max-w-xl mx-auto">
             Cuantenos que tienes en mente. En 24 horas te enviamos una propuesta
-            tecnica adaptada a tu proyecto.
+            técnica adaptada a tu proyecto.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

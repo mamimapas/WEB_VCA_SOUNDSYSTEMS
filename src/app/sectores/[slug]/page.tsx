@@ -39,7 +39,7 @@ export default async function SectorPage({ params }: Props) {
   if (!sector) notFound();
 
   const trabajosSector = TRABAJOS.filter(
-    (t) => t.categoria === sector.categoriaFiltro
+    (t) => t.categoría === sector.categoriaFiltro
   );
 
   return (
@@ -105,11 +105,11 @@ export default async function SectorPage({ params }: Props) {
         <div className="h-px bg-gradient-to-r from-[#FF6B35]/30 via-[#374151] to-transparent" />
       </div>
 
-      {/* Descripcion + beneficios */}
+      {/* Descripción + beneficios */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Descripcion */}
+            {/* Descripción */}
             <div>
               <p className="text-[#FF6B35] text-xs font-semibold uppercase tracking-widest mb-4">
                 Por que elegirnos
@@ -121,11 +121,11 @@ export default async function SectorPage({ params }: Props) {
                 Somos parte de tu equipo
               </h2>
               <p className="text-[#9CA3AF] text-base leading-relaxed">
-                {sector.descripcion}
+                {sector.descripción}
               </p>
               <p className="text-[#9CA3AF] text-base leading-relaxed mt-4">
-                No somos un proveedor mas. El dia de tu evento somos parte de tu
-                equipo. 50 anos de experiencia respaldan cada proyecto.
+                No somos un proveedor más. El día de tu evento somos parte de tu
+                equipo. 50 años de experiencia respaldan cada proyecto.
               </p>
             </div>
 
@@ -190,7 +190,7 @@ export default async function SectorPage({ params }: Props) {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/80 via-transparent to-transparent" />
                     <div className="absolute top-3 left-3">
                       <span className="inline-block px-2.5 py-1 bg-[#FF6B35] text-white text-xs font-semibold uppercase tracking-wide rounded-sm">
-                        {trabajo.categoria}
+                        {trabajo.categoría}
                       </span>
                     </div>
                   </div>
@@ -203,7 +203,7 @@ export default async function SectorPage({ params }: Props) {
                       {trabajo.titulo}
                     </h3>
                     <p className="text-[#9CA3AF] text-sm leading-relaxed mb-4">
-                      {trabajo.descripcion}
+                      {trabajo.descripción}
                     </p>
                     <div className="flex flex-wrap gap-3 pt-4 border-t border-[#374151]">
                       <div className="flex items-center gap-1.5 text-[#9CA3AF] text-xs">
@@ -251,7 +251,7 @@ export default async function SectorPage({ params }: Props) {
           </h2>
           <p className="text-[#9CA3AF] text-lg mb-10">
             Cuentanos que tienes en mente. Sin rodeos — en 24 horas tienes una
-            propuesta tecnica en tu bandeja de entrada.
+            propuesta técnica en tu bandeja de entrada.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -59,7 +59,7 @@ export default function ServicioHero({ servicio }: Props) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            {/* Icono + categoria */}
+            {/* Icono + categoría */}
             <div className="flex items-center gap-3 mb-6">
               <div className="inline-flex items-center justify-center w-10 h-10 bg-[#FF6B35]/10 rounded-sm">
                 <ServicioIcon name={servicio.iconName} size={20} className="text-[#FF6B35]" />
@@ -98,7 +98,7 @@ export default function ServicioHero({ servicio }: Props) {
             </div>
           </motion.div>
 
-          {/* Tarjeta de stats / descripcion */}
+          {/* Tarjeta de stats / descripción */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -106,7 +106,7 @@ export default function ServicioHero({ servicio }: Props) {
             className="p-8 bg-[#111827] border border-[#374151] rounded-sm"
           >
             <p className="text-[#9CA3AF] text-xs font-semibold uppercase tracking-widest mb-4">
-              Descripcion del servicio
+              Descripción del servicio
             </p>
             <p className="text-[#F9FAFB] text-base leading-relaxed mb-6">
               {servicio.descripcionCorta}
@@ -117,7 +117,7 @@ export default function ServicioHero({ servicio }: Props) {
                 Cobertura
               </p>
               <div className="flex flex-wrap gap-2">
-                {["La Rioja", "Navarra", "Pais Vasco", "Aragon", "Madrid", "Peninsula Iberica"].map(
+                {["La Rioja", "Navarra", "País Vasco", "Aragon", "Madrid", "Península Ibérica"].map(
                   (zona) => (
                     <span
                       key={zona}

@@ -41,26 +41,26 @@ const FACTS = [
   {
     value: 50,
     suffix: "+",
-    label: "Anos en el sector",
-    description: "Desde 1975 sonorizando los eventos mas importantes de La Rioja y toda Espana",
+    label: "Años en el sector",
+    description: "Desde 1975 sonorizando los eventos más importantes de La Rioja y toda España",
   },
   {
     value: 1000,
     suffix: "+",
     label: "Eventos producidos",
-    description: "Festivales, conciertos, galas corporativas, eventos institucionales y mucho mas",
+    description: "Festivales, conciertos, galas corporativas, eventos institucionales y mucho más",
   },
   {
     value: 6,
     suffix: "",
     label: "Servicios integrales",
-    description: "Sonido, iluminacion, video, streaming, estructuras y grabacion bajo un mismo equipo",
+    description: "Sonido, iluminación, video, streaming, estructuras y grabación bajo un mismo equipo",
   },
   {
     value: 47,
     suffix: "+",
     label: "Provincias cubiertas",
-    description: "Trabajamos en toda la Peninsula Iberica con nuestro propio equipo tecnico",
+    description: "Trabajamos en toda la Península Ibérica con nuestro propio equipo técnico",
   },
 ];
 
